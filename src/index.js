@@ -1,4 +1,5 @@
-import Phaser from "phaser";
+// import Phaser from "phaser";
+import "./phaser.min.js"
 import {Boot} from "./scenes/BootScene";
 import {Title} from "./scenes/TitleScene";
 import {Buttercup} from "./scenes/ButtercupScene";
@@ -14,8 +15,8 @@ const config = {
   physics: {
     default: 'arcade',
     // components:Arcade.Components.Pushable,
-    gravity: { y: 500 }, 
-    arcade: { debug: true }
+    gravity: { y: 300 }, 
+    arcade: { debug: false }
 },
   scale: {
     // mode: Phaser.Scale.FIT,
