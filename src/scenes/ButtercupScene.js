@@ -28,12 +28,15 @@ export class Buttercup extends Phaser.Scene{
       
       
       let ground = this.physics.add.staticImage(400,350,'box')
-      this.person = this.physics.add.sprite(470,100,"person").setGravity(0,200).setFrame(0)
+      this.person = this.physics.add.sprite(470,100,"person").setGravity(0,200).setFrame(0).setCollideWorldBounds(true).setBounce(.1)
 
-      let pp1 = this.physics.add.sprite(300,100,"person").setGravity(0,200).setFrame(1).enableBody()
-      let pp2 = this.physics.add.sprite(450,100,"person").setGravity(0,200).setFrame(2).enableBody()
-      let pp3 = this.physics.add.sprite(520,100,"person").setGravity(0,200).setFrame(3).enableBody()
-
+      let pp1 = this.physics.add.sprite(300,100,"person").setGravity(0,200).setFrame(1).enableBody().setCollideWorldBounds(true).setBounce(.1)
+      let pp2 = this.physics.add.sprite(450,100,"person").setGravity(0,200).setFrame(2).enableBody().setCollideWorldBounds(true).setBounce(.1)
+      let pp3 = this.physics.add.sprite(520,100,"person").setGravity(0,200).setFrame(3).enableBody().setCollideWorldBounds(true).setBounce(.1)
+    // this.person.setPushable  
+    
+    // .setPushable(false)
+      
       // this.pp1.body.setEnable()
       // this.peopleGroup = this.physics.add.group([this.person,pp1,pp2,pp3])
       // this.peopleGroup.add(this.person)
@@ -44,7 +47,7 @@ export class Buttercup extends Phaser.Scene{
      
       this.person.body.setEnable()
       // person.setMass(.2)
-      this.hero.setMass(2)
+      // this.hero.setMass(2)
       console.log(" BUTTERCUP#2 ")
       this.pad = this.add.sprite(100,100,"pad")
       this.createKeyInputs()
@@ -135,13 +138,13 @@ export class Buttercup extends Phaser.Scene{
       
     if(this.cursors.right.isDown){
       this.hero.flipX = false
-  
-      this.hero.x+=3;
+      this.hero.setVelocityX(180)
+      // this.hero.x+=3;
       }
     if(this.cursors.left.isDown){
       this.hero.flipX=true
-   
-      this.hero.x-=3
+      this.hero.setVelocityX(-180)
+      // this.hero.x-=3
      }
     if(this.cursors.down.isDown){
 
