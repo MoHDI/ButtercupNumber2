@@ -33,10 +33,14 @@ export class Buttercup extends Phaser.Scene{
       let pp1 = this.physics.add.sprite(300,100,"person").setGravity(0,200).setFrame(1).enableBody().setCollideWorldBounds(true).setBounce(.1)
       let pp2 = this.physics.add.sprite(450,100,"person").setGravity(0,200).setFrame(2).enableBody().setCollideWorldBounds(true).setBounce(.1)
       let pp3 = this.physics.add.sprite(520,100,"person").setGravity(0,200).setFrame(3).enableBody().setCollideWorldBounds(true).setBounce(.1)
+      
+
+
+      // SEE THIS RUNNING AT  - https://www.mohdi.com/buttercup2/ 
     // this.person.setPushable  
-    
     // .setPushable(false)
       
+    //I was having issues with groups too. :( 
       // this.pp1.body.setEnable()
       // this.peopleGroup = this.physics.add.group([this.person,pp1,pp2,pp3])
       // this.peopleGroup.add(this.person)
